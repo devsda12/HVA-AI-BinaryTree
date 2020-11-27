@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Data;
 
 namespace BinaryQuestions
 {
@@ -33,6 +34,7 @@ namespace BinaryQuestions
 
         public void query()
         {
+            PrintPreOrder(rootNode);
             rootNode.query(1);
 
             //We're at the end of the game now, so we'll save the tree in case the user added new data
@@ -47,5 +49,15 @@ namespace BinaryQuestions
                 formatter.Serialize(stream, rootNode);
             }
         }
+
+        #region Pre-order, in-order and post-order methods
+        public void PrintPreOrder(BTNode concerningNode, int leftCount = 0, int rightCount = 0)
+        {
+            Console.WriteLine(string.Format("Left(yes):{0} Right(No):{1}, Message: {2}", leftCount, rightCount, concerningNode.getMessage())); //Printing the message
+
+            if (concerningNode.getYesNode() != null) PrintPreOrder(concerningNode.getYesNode(), leftCount + 1);
+            if (concerningNode.getNoNode() != null) PrintPreOrder(concerningNode.getNoNode(), rightCount: rightCount + 1);
+        }
+        #endregion
     }
 }

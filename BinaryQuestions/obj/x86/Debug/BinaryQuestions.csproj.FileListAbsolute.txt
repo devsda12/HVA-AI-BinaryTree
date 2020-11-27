@@ -9,3 +9,9 @@ D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x
 D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csproj.CoreCompileInputs.cache
 D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
 D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb
+D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\bin\Debug\BinaryQuestions.exe
+D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\bin\Debug\BinaryQuestions.pdb
+D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csprojAssemblyReference.cache
+D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
+D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb
