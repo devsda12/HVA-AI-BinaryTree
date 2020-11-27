@@ -1,0 +1,11 @@
+C:\Users\Stefan\Desktop\PracticumBinaryTree\BinaryQuestions\BinaryQuestions\bin\Debug\BinaryQuestions.exe
+C:\Users\Stefan\Desktop\PracticumBinaryTree\BinaryQuestions\BinaryQuestions\bin\Debug\BinaryQuestions.pdb
+C:\Users\Stefan\Desktop\PracticumBinaryTree\BinaryQuestions\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Desktop\PracticumBinaryTree\BinaryQuestions\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
+C:\Users\Stefan\Desktop\PracticumBinaryTree\BinaryQuestions\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb
+D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\bin\Debug\BinaryQuestions.exe
+D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\bin\Debug\BinaryQuestions.pdb
+D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csprojAssemblyReference.cache
+D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
+D:\Documents\Visual Studio Projects\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb
