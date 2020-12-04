@@ -38,7 +38,7 @@ namespace BinaryQuestions
 
         public void query()
         {
-            PrintOrder(rootNode, Order.InOrder);
+            PrintOrder(rootNode, Order.PreOrder);
             rootNode.query(1);
 
             //We're at the end of the game now, so we'll save the tree in case the user added new data

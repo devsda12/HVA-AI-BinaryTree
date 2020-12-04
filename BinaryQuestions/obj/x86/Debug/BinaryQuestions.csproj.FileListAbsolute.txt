@@ -15,3 +15,9 @@ D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\De
 D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csproj.CoreCompileInputs.cache
 D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
 D:\Documents\Visual Studio Projects\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb
+C:\Users\Gebruike\Documents\School\Jaar 2\Semester 1\Blok 6\Artificial Intelligence\HVA-AI-BinaryTree\BinaryQuestions\bin\Debug\BinaryQuestions.exe
+C:\Users\Gebruike\Documents\School\Jaar 2\Semester 1\Blok 6\Artificial Intelligence\HVA-AI-BinaryTree\BinaryQuestions\bin\Debug\BinaryQuestions.pdb
+C:\Users\Gebruike\Documents\School\Jaar 2\Semester 1\Blok 6\Artificial Intelligence\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csprojAssemblyReference.cache
+C:\Users\Gebruike\Documents\School\Jaar 2\Semester 1\Blok 6\Artificial Intelligence\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csproj.CoreCompileInputs.cache
+C:\Users\Gebruike\Documents\School\Jaar 2\Semester 1\Blok 6\Artificial Intelligence\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
+C:\Users\Gebruike\Documents\School\Jaar 2\Semester 1\Blok 6\Artificial Intelligence\HVA-AI-BinaryTree\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb
