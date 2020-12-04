@@ -9,6 +9,10 @@ using System.Data;
 
 namespace BinaryQuestions
 {
+    #region Namespace enums
+    internal enum Order { PreOrder, InOrder, PostOrder }
+    #endregion
+
     [Serializable] class BTTree
     {
         BTNode rootNode;
@@ -34,7 +38,7 @@ namespace BinaryQuestions
 
         public void query()
         {
-            PrintPreOrder(rootNode);
+            PrintOrder(rootNode, Order.InOrder);
             rootNode.query(1);
 
             //We're at the end of the game now, so we'll save the tree in case the user added new data
@@ -51,12 +55,28 @@ namespace BinaryQuestions
         }
 
         #region Pre-order, in-order and post-order methods
-        public void PrintPreOrder(BTNode concerningNode, int leftCount = 0, int rightCount = 0)
+        public void PrintOrder(BTNode concerningNode, Order order, string currentStreak = "")
         {
-            Console.WriteLine(string.Format("Left(yes):{0} Right(No):{1}, Message: {2}", leftCount, rightCount, concerningNode.getMessage())); //Printing the message
+            switch (order)
+            {
+                case Order.PreOrder:
+                    Console.WriteLine(string.Format("CurrentStreak: {0}, Message: {1}", currentStreak, concerningNode.getMessage())); //Printing the message
+                    if (concerningNode.getYesNode() != null) PrintOrder(concerningNode.getYesNode(), order, currentStreak + "Y");
+                    if (concerningNode.getNoNode() != null) PrintOrder(concerningNode.getNoNode(), order, currentStreak + "N");
+                    break;
 
-            if (concerningNode.getYesNode() != null) PrintPreOrder(concerningNode.getYesNode(), leftCount + 1);
-            if (concerningNode.getNoNode() != null) PrintPreOrder(concerningNode.getNoNode(), rightCount: rightCount + 1);
+                case Order.InOrder:
+                    if (concerningNode.getYesNode() != null) PrintOrder(concerningNode.getYesNode(), order, currentStreak + "Y");
+                    Console.WriteLine(string.Format("CurrentStreak: {0}, Message: {1}", currentStreak, concerningNode.getMessage())); //Printing the message
+                    if (concerningNode.getNoNode() != null) PrintOrder(concerningNode.getNoNode(), order, currentStreak + "N");
+                    break;
+
+                case Order.PostOrder:
+                    if (concerningNode.getYesNode() != null) PrintOrder(concerningNode.getYesNode(), order, currentStreak + "Y");
+                    if (concerningNode.getNoNode() != null) PrintOrder(concerningNode.getNoNode(), order, currentStreak + "N");
+                    Console.WriteLine(string.Format("CurrentStreak: {0}, Message: {1}", currentStreak, concerningNode.getMessage())); //Printing the message
+                    break;
+            }
         }
         #endregion
     }
