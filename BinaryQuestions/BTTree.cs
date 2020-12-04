@@ -39,6 +39,7 @@ namespace BinaryQuestions
         public void query()
         {
             PrintOrder(rootNode, Order.PreOrder);
+            Console.WriteLine(string.Format("Minimax output: {0}", Minimax(rootNode, true)));
             rootNode.query(1);
 
             //We're at the end of the game now, so we'll save the tree in case the user added new data
@@ -52,7 +53,7 @@ namespace BinaryQuestions
             {
                 formatter.Serialize(stream, rootNode);
             }
-        }
+        }    
 
         #region Pre-order, in-order and post-order methods
         public void PrintOrder(BTNode concerningNode, Order order, string currentStreak = "")
@@ -77,6 +78,21 @@ namespace BinaryQuestions
                     Console.WriteLine(string.Format("CurrentStreak: {0}, Message: {1}", currentStreak, concerningNode.getMessage())); //Printing the message
                     break;
             }
+        }
+        #endregion
+
+        #region Minimax
+        public int Minimax(BTNode concerningNode, bool isMax)
+        {
+            if (!concerningNode.isQuestion())
+                return concerningNode.Evaluation();
+            
+            if(isMax)
+                return Math.Max(Minimax(concerningNode.getYesNode(), !isMax),
+                                Minimax(concerningNode.getNoNode(), !isMax));
+            else
+                return Math.Min(Minimax(concerningNode.getYesNode(), !isMax),
+                                Minimax(concerningNode.getNoNode(), !isMax));
         }
         #endregion
     }

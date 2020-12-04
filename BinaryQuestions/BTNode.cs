@@ -35,12 +35,15 @@ namespace BinaryQuestions
                 Console.Write("Enter 'y' for yes and 'n' for no: ");
                 char input = getYesOrNo(); //y or n
                 if (input == 'y')
-                    yesNode.query(q+1);
+                    yesNode.query(q + 1);
                 else
-                    noNode.query(q+1);
+                    noNode.query(q + 1);
             }
             else
+            {
                 this.onQueryObject(q);
+                Console.Write(string.Format("The amount of characters in this message is: {0}", Evaluation()));
+            }
         }
 
         public void onQueryObject(int q)
@@ -52,6 +55,11 @@ namespace BinaryQuestions
                 Console.Write("I Win!\n");
             else
                 updateTree();
+        }
+
+        public int Evaluation()
+        {
+            return message.Length; 
         }
 
         private void updateTree()
