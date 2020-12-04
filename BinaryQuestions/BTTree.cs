@@ -40,6 +40,7 @@ namespace BinaryQuestions
         {
             PrintOrder(rootNode, Order.PreOrder);
             Console.WriteLine(string.Format("Minimax output: {0}", Minimax(rootNode, true)));
+            Console.WriteLine(string.Format("ABPruning output: {0}", ABPruning(rootNode, true)));
             rootNode.query(1);
 
             //We're at the end of the game now, so we'll save the tree in case the user added new data
@@ -93,6 +94,49 @@ namespace BinaryQuestions
             else
                 return Math.Min(Minimax(concerningNode.getYesNode(), !isMax),
                                 Minimax(concerningNode.getNoNode(), !isMax));
+        }
+        #endregion
+
+        #region Alpha-Beta pruning
+        public int ABPruning(BTNode concerningNode, bool isMax, int alpha = int.MinValue, int beta = int.MaxValue)
+        {
+            Console.WriteLine(string.Format("Now checking node {0}", concerningNode.getMessage()));
+
+            if (!concerningNode.isQuestion())
+                return concerningNode.Evaluation();
+
+            if (isMax)
+            {
+                int best = int.MinValue;
+
+                for(int i = 0; i < 2; i++)
+                {
+                    int value = ABPruning(i == 0 ? concerningNode.getYesNode() : concerningNode.getNoNode(), false, alpha, beta);
+
+                    best = Math.Max(best, value);
+                    alpha = Math.Max(alpha, best);
+
+                    if (beta <= alpha)
+                        break;
+                }
+                return best;
+            }
+            else
+            {
+                int best = int.MaxValue;
+
+                for (int i = 0; i < 2; i++)
+                {
+                    int value = ABPruning(i == 0 ? concerningNode.getYesNode() : concerningNode.getNoNode(), true, alpha, beta);
+
+                    best = Math.Min(best, value);
+                    beta = Math.Min(beta, best);
+
+                    if (beta <= alpha)
+                        break;
+                }
+                return best;
+            }
         }
         #endregion
     }
